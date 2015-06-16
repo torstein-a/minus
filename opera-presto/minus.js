@@ -6,6 +6,8 @@
 // @include http://*.dn.no/*
 // ==/UserScript==
 
+console.log('running');
+
 // Just fuck these guys.
 document.addEventListener('DOMContentLoaded', function () {
     Array.prototype.forEach.call(document.querySelectorAll('iframe'), function (el) {
@@ -54,7 +56,7 @@ if (location.hostname.match("dagbladet.no")) {
             el.parentNode.parentNode.style.background = blandColour();
         });
         //Se.no
-        Array.prototype.forEach.call(document.querySelectorAll('.a[href^="http://se.no"]'), function (el) {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="http://se.no"]'), function (el) {
             el.style.visibility = "hidden";
             el.parentNode.style.background = blandColour();
         });
