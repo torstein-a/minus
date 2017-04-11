@@ -16,10 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 var blandColour = function() {
-    return "rgba(" + ((60 + Math.random() * 80)|0) +
-        "," + ((60 + Math.random() * 80)|0) +
-        "," + ((60 + Math.random() * 80)|0) +
-        ",.3)";
+    return "rgba(x,x,x,.3)".replace(/x/g,(function(){return (60 + Math.random() * 80)|0;}));
 };
 
 // Polaris
